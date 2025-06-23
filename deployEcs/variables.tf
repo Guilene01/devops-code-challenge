@@ -2,38 +2,6 @@ variable "region" {
   type = string
   default = "us-west-2"
 }
-variable "frontend_app_name" {
-  type = string
-  default = "node-frontend" 
-}
-variable "backend_app_name" {
-  type = string
-  default = "node-backend" 
-}
-variable "project_name" {
-    type = string
-    default = "Challenge-node-app"
-}
-variable "VPC_cidr" {
-  type = string
-  default = "10.10.0.0/16" 
-}
-variable "subnet_priv1_cidr" {
-  type = string
-  default = "10.10.0.0/20"
-}
-variable "subnet_priv2_cidr" {
-  type = string
-  default = "10.10.16.0/20"
-}
-variable "subnet_pub1_cidr" {
-  type = string
-  default = "10.10.32.0/20"
-} 
-variable "subnet_pub2_cidr" {
-  type = string
-  default = "10.10.80.0/20"
-}  
 variable "AZ1" {
   type = string
   default = "us-west-2a"
@@ -41,6 +9,14 @@ variable "AZ1" {
 variable "AZ2" {
   type = string
   default = "us-west-2b"
+}
+variable "frontend_app_name" {
+  type = string
+  default = "node-frontend" 
+}
+variable "backend_app_name" {
+  type = string
+  default = "node-backend" 
 }
 variable "cpu" {
     type = number
@@ -57,6 +33,10 @@ variable "image_tag" {
 variable "cluster_name" {
     type = string
     default = "Challenge"
+}
+variable "project_name" {
+    type = string
+    default = "Challenge-node-app"
 }
 variable "backend_port" {
     description = "port of the backend app"
