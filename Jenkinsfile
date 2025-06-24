@@ -49,17 +49,17 @@ pipeline {
                 docker push $BACKEND_REPO:$TAG
                 '''
             }
-        }/*
+        }
 
         stage ('Deploying the app to ECS'){
             steps{
                 sh '''
-                cd ecs-deployment
+                cd deployEcs
                 terraform init
                 terraform apply -auto-approve
                 '''
             }
-        }
+        }/*
 
          stage ('Hold Destroy') {
             steps {
