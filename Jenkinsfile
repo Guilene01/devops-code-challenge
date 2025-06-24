@@ -59,7 +59,7 @@ pipeline {
                 terraform apply -auto-approve
                 '''
             }
-        }/*
+        }
 
          stage ('Hold Destroy') {
             steps {
@@ -78,6 +78,6 @@ pipeline {
                 docker rmi `docker image ls | grep "end-repo" | awk '{print $1}'`
                 '''
             }
-        }*/
+        }
     }
 }
