@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        //FRONTEND_REPO = "885684264653.dkr.ecr.us-east-2.amazonaws.com/node-frontend-repo"
-        //BACKEND_REPO = "977098999802.dkr.ecr.us-west-2.amazonaws.com/frontend-repo"
+        FRONTEND_REPO = "885684264653.dkr.ecr.us-east-2.amazonaws.com/node-frontend-repo"
+        BACKEND_REPO = "977098999802.dkr.ecr.us-west-2.amazonaws.com/frontend-repo"
         AWS_REGION = "us-west-2"
         TAG = "latest"
     }
@@ -19,7 +19,7 @@ pipeline {
             }
         }
 
-        /*stage ('Build backend and frontend images to ECR'){
+        stage ('Build backend and frontend images to ECR'){
             steps {
                 sh '''
                  # Build The Frontend Image from the Dockerfile of the frontend
@@ -31,7 +31,7 @@ pipeline {
                 docker build -t $BACKEND_REPO:$TAG backend
                 '''
             }
-        }
+        }/*
 
         stage ('Push backend and frontend images to ECR'){
             steps {
