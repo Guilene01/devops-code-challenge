@@ -31,7 +31,7 @@ pipeline {
                 docker build -t $BACKEND_REPO:$TAG backend
                 '''
             }
-        }/*
+        }
 
         stage ('Push backend and frontend images to ECR'){
             steps {
@@ -49,7 +49,7 @@ pipeline {
                 docker push $BACKEND_REPO:$TAG
                 '''
             }
-        }
+        }/*
 
         stage ('Deploying the app to ECS'){
             steps{
